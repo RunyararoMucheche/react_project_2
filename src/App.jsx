@@ -5,17 +5,8 @@ import entries from "./data.js";
 export default function App() {
   // Creating Entry elements
   const entryElement = entries.map((entry) => {
-    return (
-      <Entry
-        key={entry.id}
-        img={entry.img}
-        title={entry.title}
-        country={entry.country}
-        googleMapsLink={entry.googleMapsLink}
-        dates={entry.dates}
-        text={entry.text}
-      />
-    );
+    console.log(entry);
+    return <Entry key={entry.id} entry={entry} />;
   });
 
   // Returning the react data
